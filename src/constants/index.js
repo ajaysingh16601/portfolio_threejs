@@ -22,7 +22,7 @@ export const navLinks = [
   {
     id: 5,
     name: 'Resume',
-    href: 'public/assets/ajay_solanki_cv.pdf', 
+    href: 'assets/ajay_solanki_cv.pdf', 
   },
 ];
 
@@ -34,7 +34,7 @@ export const myProjects = [
     With user-centric services, Maal empowers users to take control of their financial well-being by offering seamless solutions for payment management, 
     investments, mobile recharge, and loans.`,
     subdesc: 'Tecnology: Angular, Django, PostgreSQL, TypeScript, Material UI',
-    href: 'https://maalbanking.com/',
+    href: '',
     texture: '/textures/project/maal1.mp4',
     logo: 'https://www.svgrepo.com/show/9509/bank.svg',
     logoStyle: {
@@ -76,7 +76,7 @@ export const myProjects = [
     title: 'Cowrie - Cryptocurrency Exchange',
     desc:'Cowrie is a cutting-edge cryptocurrency exchange platform based in South Africa. Designed to cater to the growing demand for digital assets, Cowrie offers a seamless experience for buying, selling, and exchanging various cryptocurrencies. With real-time transaction capabilities and a user-friendly interface, Cowrie empowers individuals and businesses to participate in the exciting world of cryptocurrency trading.',
     subdesc: 'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap',
-    href: 'https://www.mycowrie.org/login',
+    href: '',
     texture: '/textures/project/cowrie.mp4',
     logo: 'https://img.icons8.com/?size=100&id=7748&format=png&color=000000',
     logoStyle: {
@@ -120,7 +120,7 @@ export const myProjects = [
     and participate in interactive virtual classrooms. With its robust features, It empowers students to enhance their learning experience and 
     achieve their academic goals through convenient and flexible online education.`,
     subdesc:'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap',
-    href: 'https://student.getyasa.com/login',
+    href: '',
     texture: '/textures/project/yasa.mp4',
     logo: '/assets/project-logo3.png',
     logoStyle: {
@@ -159,89 +159,15 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   title: 'Horizon - Online Banking Platform',
-  //   desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-  //   subdesc:
-  //     'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-  //   href: '',
-  //   texture: '/textures/project/maal1.mp4',
-  //   logo: '/assets/project-logo4.png',
-  //   logoStyle: {
-  //     backgroundColor: '#0E1F38',
-  //     border: '0.2px solid #0E2D58',
-  //     boxShadow: '0px 0px 60px 0px #2F67B64D',
-  //   },
-  //   spotlight: '/assets/spotlight4.png',
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: 'React.js',
-  //       path: 'https://www.svgrepo.com/show/354259/react.svg',
-  //     },
-  //     {
-  //       id: 2,
-  //       name: 'TailwindCSS',
-  //       path: 'assets/tailwindcss.png',
-  //     },
-  //     {
-  //       id: 3,
-  //       name: 'TypeScript',
-  //       path: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-  //     },
-  //     {
-  //       id: 4,
-  //       name: 'Framer Motion',
-  //       path: '/assets/framer.png',
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: 'Imaginify - AI Photo Manipulation App',
-  //   desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-  //   subdesc:
-  //     'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-  //   href: '',
-  //   texture: '/textures/project/maal1.mp4',
-  //   logo: '/assets/project-logo5.png',
-  //   logoStyle: {
-  //     backgroundColor: '#1C1A43',
-  //     border: '0.2px solid #252262',
-  //     boxShadow: '0px 0px 60px 0px #635BFF4D',
-  //   },
-  //   spotlight: '/assets/spotlight5.png',
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: 'React.js',
-  //       path: 'https://www.svgrepo.com/show/354259/react.svg',
-  //     },
-  //     {
-  //       id: 2,
-  //       name: 'TailwindCSS',
-  //       path: 'assets/tailwindcss.png',
-  //     },
-  //     {
-  //       id: 3,
-  //       name: 'TypeScript',
-  //       path: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
-  //     },
-  //     {
-  //       id: 4,
-  //       name: 'Framer Motion',
-  //       path: '/assets/framer.png',
-  //     },
-  //   ],
-  // },
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
+    cubePosition: isSmall ? [3, -6, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
     reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
+    ringPosition: isSmall ? [-5, 8, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
     targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
   };
 };
@@ -328,11 +254,6 @@ export const skills = [
             image: 'https://www.svgrepo.com/show/354259/react.svg',
           },
           {
-            id: 3.3,
-            name: "Three Js",
-            image: 'https://global.discourse-cdn.com/flex035/uploads/threejs/optimized/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751_2_496x500.png',
-          },
-          {
             id: 3.4,
             name: "Express Js",
             image: 'https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1',
@@ -352,6 +273,12 @@ export const skills = [
             name: "Next js",
             image: 'https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png',
           },
+          {
+            id: 3.3,
+            name: "Three Js",
+            image: 'https://global.discourse-cdn.com/flex035/uploads/threejs/optimized/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751_2_496x500.png',
+          },
+
       ]
   },
   {
