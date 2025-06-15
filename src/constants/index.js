@@ -216,6 +216,12 @@ export const skills = [
               name: "TypeScript",
               image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
           },
+          {
+            id: 1.3,
+            name: "Python",
+            image: "https://www.python.org/static/opengraph-icon-200x200.png",
+          }
+
       ]
   },
   {
@@ -237,48 +243,73 @@ export const skills = [
               name: "MySQL",
               image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
           },
+                {
+        id: 2.4,
+        name: "Redis",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      },
+      {
+        id: 2.5,
+        name: "",
+        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      }
+
       ]
   },
   {
       id: 3,
       title: "Libraries & Frameworks",
       skill: [
-          {
-            id:3.1,
-            name:'Angular',
-            image:'https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png'
-          },
-          {
-            id: 3.2,
-            name: "React Js",
-            image: 'https://www.svgrepo.com/show/354259/react.svg',
-          },
-          {
-            id: 3.4,
-            name: "Express Js",
-            image: 'https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1',
-          },
-          {
-            id: 3.5,
-            name: "",
-            image: "https://nodejs.org/static/images/logo.svg",
-          },
-          {
-            id: 3.6,
-            name: "Redux",
-            image: "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
-          },
-          {
-            id: 3.7,
-            name: "Next js",
-            image: 'https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png',
-          },
-          {
-            id: 3.3,
-            name: "Three Js",
-            image: 'https://global.discourse-cdn.com/flex035/uploads/threejs/optimized/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751_2_496x500.png',
-          },
-
+        {
+          id: 3.1,
+          name: "Angular",
+          image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png",
+        },
+        {
+          id: 3.2,
+          name: "React Js",
+          image: "https://www.svgrepo.com/show/354259/react.svg",
+        },
+        {
+          id: 3.3,
+          name: "Express Js",
+          image: "https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1",
+        },
+        {
+          id: 3.4,
+          name: "",
+          image: "https://nodejs.org/static/images/logo.svg",
+        },
+        {
+          id: 3.5,
+          name: "Redux",
+          image: "https://d33wubrfki0l68.cloudfront.net/0834d0215db51e91525a25acf97433051f280f2f/c30f5/img/redux.svg",
+        },
+        {
+          id: 3.6,
+          name: "Next js",
+          image: "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png",
+        },
+        {
+          id: 3.7,
+          name: "Django",
+          image: "https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg",
+        },
+        {
+          id: 3.8,
+          name: "jQuery",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+        },
+        {
+          id: 3.9,
+          name: "Framer Motion",
+          image: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg",
+        },
+        {
+          id: 3.10,
+          name: "Three Js",
+          image: "https://raw.githubusercontent.com/mrdoob/three.js/master/files/icon.svg",
+        }
       ]
   },
   {
@@ -374,7 +405,44 @@ export const skills = [
               name: "VS Code",
               image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
           },
+                {
+        id: 6.4,
+        name: "Jest",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+      },
+      {
+        id: 6.5,
+        name: "JWT",
+        image: "https://jwt.io/img/pic_logo.svg",
+      },
+      {
+        id: 6.6,
+        name: "OAuth2",
+        image: "https://oauth.net/images/oauth-logo-square.png",
+      },
+
 
       ]
+  },
+  {
+    id: 7,
+    title: "Soft/Meta Tools", // ✅ NEW
+    skill: [
+      {
+        id: 7.1,
+        name: "Notion",
+        image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+      },
+      {
+        id: 7.2,
+        name: "Trello",
+        image: "https://cdn.worldvectorlogo.com/logos/trello.svg",
+      },
+      {
+        id: 7.3,
+        name: "Jira",
+        image: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
+      },
+    ]
   }
 ];
