@@ -161,14 +161,10 @@ export const myProjects = [
   },
 ];
 
-export const calculateSizes = (isSmall, isMobile, isTablet) => {
+export const calculateSizes = (isSmall, isMobile) => {
   return {
     deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
     deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-    cubePosition: isSmall ? [3, -6, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
-    reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
-    ringPosition: isSmall ? [-5, 8, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
-    targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
   };
 };
 
@@ -179,9 +175,9 @@ export const workExperiences = [
     name: 'Cyber Infrastructure Indore',
     pos: 'Software Developer',
     duration: '05/2023 - present',
-    title: `• Designed and implemented scalable system architectures for multiple projects.`,
-    titleDes: `• Collaborated with cross-functional teams, adhering to best coding practices and tight deadlines.`,
-    titleSubDes: `• Utilized expertise in React, Angular, Node, Express, MongoDB developed live projects with optimizing user interfaces.`,
+    title: `• Designed and implemented scalable system architectures for multiple projects. Developed projects using Angular, React, Node.js, Express.js, Redux, Redux-toolkit, and Material UI.`,
+    titleDes: `• Worked closely with the business team to understand and fulfill client requirements. Analyzed client requirements, performed RND and provided accurate project estimates and responses.`,
+    titleSubDes: `• Collaborated with cross-functional teams to deliver features and optimize performance. Facilitated clear com-munication with global clients, ensuring project success and satisfaction.`,
     icon: '/assets/cislogo.png',
     animation: 'victory',
   },
@@ -190,8 +186,8 @@ export const workExperiences = [
     name: 'Technovation Unicorns',
     pos: 'Software Engineer Intern',
     duration: '01/2023 - 04/2023',
-    title: `• Technovation Unicorns helps me keep my projects organized.`,
-    titleDes: `• Developed an Employee Management System utilized design tools for the project planning.`,
+    title: `• Developed a full-stack Employee Management System using MERN stack.`,
+    titleDes: `• Designed and implemented reusable UI components in React, improving scalability.`,
     titleSubDes: `• Independently built the project using MERN and proficient in performing CRUD operations.`,
         
     icon: '/assets/techno.jpeg',
@@ -445,4 +441,42 @@ export const skills = [
       },
     ]
   }
+];
+
+export const socialLinks = [
+  {
+    id: 1,
+    name: 'GitHub',
+    href: 'https://github.com/ajaysingh16601',
+    icon: '/assets/github.svg',
+    alt: 'github',
+  },
+  {
+    id: 2,
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ajaysinghsolanki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    icon: '/assets/twitter.svg',
+    alt: 'linkedin',
+  },
+  {
+    id: 3,
+    name: 'Instagram',
+    href: 'https://www.instagram.com/ajey.singh.__.01/profilecard/?igsh=MXhjdHVrOTc2MndqaA==',
+    icon: '/assets/instagram.svg',
+    alt: 'instagram',
+  },
+  {
+    id: 4,
+    name: 'Medium',
+    href: 'https://medium.com/@ajaysingh16601',
+    icon: '/assets/medium.svg',
+    alt: 'medium',
+  },
+  {
+    id: 5,
+    name: 'X',
+    href: 'https://x.com/Ajeysingh01',
+    icon: '/assets/x.svg',
+    alt: 'x',
+  },
 ];

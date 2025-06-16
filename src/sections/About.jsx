@@ -17,41 +17,34 @@ const About = () => {
 
   return (
     <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
+      <div className="grid xl:grid-cols-3 xl:grid-rows-2 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        <div className="col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img src="assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
               <p className="grid-headtext">Hi, I’m Ajay Solanki</p>
               <p className="grid-subtext">
-              I am a seasoned Fullstack developer with over 2+ years of experience in creating dynamic and responsive web applications. My expertise lies in crafting interactive user interfaces and ensuring a seamless user experience. 
-                Open to new challenges and try to learn about new approaches. 
-                {/* Effective communication and collaboration skills both written and verbal. */}
+                I’m a passionate Fullstack Developer with over 2 years of professional experience in building scalable, high-performance web applications. I specialize in crafting intuitive user interfaces and delivering seamless end-to-end user experiences. I’m always eager to explore new technologies and embrace challenges that push me to grow.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
+        <div className="col-span-1 xl:row-span-2">
           <div className="grid-container">
             <img src="assets/file2.png" alt="Tech" className="w-full sm:h-[276px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">Tech Stack</p>
-              <p className="grid-subtext">
-                {/* I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications */}
-                Experience in JavaScript technologies like Angular(7-18), React JS, Node JS.
-                Responsible for maintaining code quality and dedicated to meet project deadlines.
-                Experience in version control like Git hub, Git Lab, Bit Bucket.
-                Ability to manage projects, possess good interpersonal and analytical skills and a strong team player.
-              </p>
+<p className="grid-headtext">Tech Stack</p>
+<p className="grid-subtext">
+  Proficient in modern JavaScript frameworks including Angular (v7–v18), React.js, and Node.js. Skilled in building RESTful APIs, component-based architectures, and maintaining clean, efficient codebases. Experienced with version control systems like GitHub, GitLab, and Bitbucket. I bring strong project ownership, collaborative team spirit, and sharp problem-solving abilities to every project.
+</p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-4">
+        <div className="col-span-1 xl:row-span-2">
           <div className="grid-container">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
@@ -67,28 +60,29 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Indore, India and open to remote work worldwide.</p>
+              <p className="grid-headtext">Global Collaboration Ready</p>
+              <p className="grid-subtext">
+                Based in Indore, India — I’m highly flexible with time zones and thrive in remote-first environments. I’m open to global opportunities and committed to clear and consistent communication across borders.
+              </p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
           </div>
         </div>
 
-        <div className="xl:col-span-2 xl:row-span-3">
+        <div className="xl:col-span-2 xl:row-span-1">
           <div className="grid-container">
             <img src="assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
 
             <div>
-              <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
-              </p>
+<p className="grid-headtext">My Passion for Coding</p>
+<p className="grid-subtext">
+  Coding is not just my career—its what I love. I’m driven by a curiosity to solve real-world problems through elegant code. Whether it’s optimizing a complex algorithm or experimenting with the latest web tech, I’m always looking to improve and innovate.
+</p>
             </div>
           </div>
         </div>
 
-        <div className="xl:col-span-1 xl:row-span-2">
+        <div className="xl:col-span-1 xl:row-span-1">
           <div className="grid-container">
             <img
               src="assets/grid4.png"

@@ -1,3 +1,5 @@
+// socialLinks import 
+import {socialLinks} from '../constants/index'
 const Footer = () => {
   return (
     <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
@@ -7,7 +9,7 @@ const Footer = () => {
         <p>Privacy Policy</p>
       </div>
 
-      <div className="flex gap-3">
+      {/* <div className="flex gap-3">
         <div className="social-icon">
           <a target="blank"  href="https://github.com/ajaysingh16601" className="w-1/2 h-1/2" >
           <img src="/assets/github.svg" alt="github"/>
@@ -23,7 +25,16 @@ const Footer = () => {
             <img src="/assets/instagram.svg" alt="instagram" />
           </a>
         </div>
-      </div>
+      </div> */}
+      <div className="flex gap-3">
+  {socialLinks.map(({ id, href, icon, alt }) => (
+    <div key={id} className="social-icon">
+      <a target="_blank" rel="noopener noreferrer" href={href} className="w-1/2 h-1/2">
+        <img src={icon} alt={alt} />
+      </a>
+    </div>
+  ))}
+</div>
 
       <p className="text-white-500">© 2024 Ajay Solanki</p>
     </footer>
