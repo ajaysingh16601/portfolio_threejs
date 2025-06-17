@@ -1,41 +1,46 @@
 // socialLinks import 
-import {socialLinks} from '../constants/index'
+import {socialLinks} from '../constants/index';
+import toast from 'react-hot-toast';
+
 const Footer = () => {
   return (
     <footer className="c-space pt-7 pb-3 border-t border-black-300 flex justify-between items-center flex-wrap gap-5">
-      <div className="text-white-500 flex gap-2">
-        <p>Terms & Conditions</p>
-        <p>|</p>
-        <p>Privacy Policy</p>
-      </div>
-
-      {/* <div className="flex gap-3">
-        <div className="social-icon">
-          <a target="blank"  href="https://github.com/ajaysingh16601" className="w-1/2 h-1/2" >
-          <img src="/assets/github.svg" alt="github"/>
-          </a>
-        </div>
-        <div className="social-icon">
-          <a target="blank"  href="https://www.linkedin.com/in/ajaysinghsolanki?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="w-1/2 h-1/2" >
-            <img src="/assets/twitter.svg" alt="twitter" />
-          </a> 
-        </div>
-        <div className="social-icon">
-          <a className="w-1/2 h-1/2" target="blank" href="https://www.instagram.com/ajey.singh.__.01/profilecard/?igsh=MXhjdHVrOTc2MndqaA==">
-            <img src="/assets/instagram.svg" alt="instagram" />
-          </a>
-        </div>
-      </div> */}
-      <div className="flex gap-3">
-  {socialLinks.map(({ id, href, icon, alt }) => (
-    <div key={id} className="social-icon">
-      <a target="_blank" rel="noopener noreferrer" href={href} className="w-1/2 h-1/2">
-        <img src={icon} alt={alt} />
-      </a>
-    </div>
-  ))}
+<div className="text-white-500 flex gap-2">
+  <p
+  className="cursor-pointer hover:underline"
+  onClick={() => toast("😎 Terms? I like to keep things casual.", {
+  style: {
+    borderRadius: '8px',
+    background: '#000',
+    color: '#fff',
+  },
+})}
+  >
+    Terms & Conditions
+  </p>
+  <p>|</p>
+  <p
+    className="cursor-pointer hover:underline"
+    onClick={() => toast("👻 Privacy Policy? Just pretend it’s haunted.", {
+  style: {
+    borderRadius: '8px',
+    background: '#000',
+    color: '#fff',
+  },
+})}
+  >
+    Privacy Policy
+  </p>
 </div>
-
+      <div className="flex gap-3">
+        {socialLinks.map(({ id, href, icon, alt }) => (
+          <div key={id} className="social-icon">
+            <a target="_blank" rel="noopener noreferrer" href={href} className="w-1/2 h-1/2">
+              <img src={icon} alt={alt} />
+            </a>
+          </div>
+        ))}
+      </div>
       <p className="text-white-500">© 2024 Ajay Solanki</p>
     </footer>
   );

@@ -6,6 +6,7 @@ import Contact from './sections/Contact.jsx';
 import Clients from './sections/Clients.jsx';
 import Projects from './sections/Projects.jsx';
 import WorkExperience from './sections/Experience.jsx';
+import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <WorkExperience />
       <Contact />
       <Footer />
+      <Toaster position="top-center" reverseOrder={false} />
     </main>
   );
 };
