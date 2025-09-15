@@ -28,10 +28,10 @@ export const navLinks = [
 
 export const myProjects = [
   {
-    title: 'Maal Banking System - Micro Finance Bank',
-    desc: `Maal is a Bank Application mostly used in Nigeria, SA. This application is used for managing the Administration workflow related to the TAJ Bank. 
-    Maal is a dynamic and innovative organization that revolutionizes the way individuals manage their financial transactions and investments. 
-    With user-centric services, Maal empowers users to take control of their financial well-being by offering seamless solutions for payment management, 
+    title: 'Banking System - Micro Finance Bank',
+    desc: `A Bank Application mostly used in SA. This application is used for managing the Administration workflow related to the Bank. 
+    MFB is a dynamic and innovative organization that revolutionizes the way individuals manage their financial transactions and investments. 
+    With user-centric services, MFB empowers users to take control of their financial well-being by offering seamless solutions for payment management, 
     investments, mobile recharge, and loans.`,
     subdesc: 'Tecnology: Angular, Django, PostgreSQL, TypeScript, Material UI',
     href: '',
@@ -73,8 +73,8 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Cowrie - Cryptocurrency Exchange',
-    desc:'Cowrie is a cutting-edge cryptocurrency exchange platform based in South Africa. Designed to cater to the growing demand for digital assets, Cowrie offers a seamless experience for buying, selling, and exchanging various cryptocurrencies. With real-time transaction capabilities and a user-friendly interface, Cowrie empowers individuals and businesses to participate in the exciting world of cryptocurrency trading.',
+    title: 'Cryptocurrency Exchange App',
+    desc:'App is a cutting-edge cryptocurrency exchange platform based in South Africa. Designed to cater to the growing demand for digital assets, App offers a seamless experience for buying, selling, and exchanging various cryptocurrencies. With real-time transaction capabilities and a user-friendly interface, App empowers individuals and businesses to participate in the exciting world of cryptocurrency trading.',
     subdesc: 'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap',
     href: '',
     texture: '/textures/project/cowrie.mp4',
@@ -114,8 +114,8 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Yasa Student App',
-    desc: `Yasa Student App is a comprehensive platform designed to facilitate seamless connections between students and teachers for online classes. 
+    title: 'Student Learning App',
+    desc: `Student Learning App is a comprehensive platform designed to facilitate seamless connections between students and teachers for online classes. 
     The app offers a user-friendly interface for students to explore a wide range of courses, connect with qualified instructors, 
     and participate in interactive virtual classrooms. With its robust features, It empowers students to enhance their learning experience and 
     achieve their academic goals through convenient and flexible online education.`,

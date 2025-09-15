@@ -25,7 +25,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Ajay Solanki</p>
               <p className="grid-subtext">
-                I’m a passionate Fullstack Developer with over 2 years of professional experience in building scalable, high-performance web applications. I specialize in crafting intuitive user interfaces and delivering seamless end-to-end user experiences. I’m always eager to explore new technologies and embrace challenges that push me to grow.
+                I’m a passionate Fullstack Developer with over 3 years of professional experience in building scalable, high-performance web applications. I specialize in crafting intuitive user interfaces and delivering seamless end-to-end user experiences. I’m always eager to explore new technologies and embrace challenges that push me to grow.
               </p>
             </div>
           </div>
@@ -38,7 +38,7 @@ const About = () => {
             <div>
 <p className="grid-headtext">Tech Stack</p>
 <p className="grid-subtext">
-  Proficient in modern JavaScript frameworks including Angular (v7–v18), React.js, and Node.js. Skilled in building RESTful APIs, component-based architectures, and maintaining clean, efficient codebases. Experienced with version control systems like GitHub, GitLab, and Bitbucket. I bring strong project ownership, collaborative team spirit, and sharp problem-solving abilities to every project.
+  Proficient in modern JavaScript frameworks including React.js, Angular (v7–v18), and Node.js. Skilled in building RESTful APIs, component-based architectures, and maintaining clean, efficient codebases. Experienced with version control systems like GitHub, GitLab, and Bitbucket. I bring strong project ownership, collaborative team spirit, and sharp problem-solving abilities to every project.
 </p>
             </div>
           </div>
@@ -62,7 +62,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Global Collaboration Ready</p>
               <p className="grid-subtext">
-                Based in Indore, India — I’m highly flexible with time zones and thrive in remote-first environments. I’m open to global opportunities and committed to clear and consistent communication across borders.
+                Based in Indore, India - I’m highly flexible with time zones and thrive in remote-first environments. I’m open to global opportunities and committed to clear and consistent communication across borders.
               </p>
               <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
             </div>
@@ -76,7 +76,7 @@ const About = () => {
             <div>
 <p className="grid-headtext">My Passion for Coding</p>
 <p className="grid-subtext">
-  Coding is not just my career—its what I love. I’m driven by a curiosity to solve real-world problems through elegant code. Whether it’s optimizing a complex algorithm or experimenting with the latest web tech, I’m always looking to improve and innovate.
+  Coding is not just my career-its what I love. I’m driven by a curiosity to solve real-world problems through elegant code. Whether it’s optimizing a complex algorithm or experimenting with the latest web tech, I’m always looking to improve and innovate.
 </p>
             </div>
           </div>
