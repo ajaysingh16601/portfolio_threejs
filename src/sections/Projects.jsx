@@ -7,6 +7,7 @@ import { Center, OrbitControls } from '@react-three/drei';
 import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
+import { LazyImage } from '../components/LazyLoad.jsx';
 
 const projectCount = myProjects.length;
 
@@ -36,11 +37,19 @@ const Projects = () => {
       <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
         <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
           <div className="absolute top-0 right-0">
-            <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
+            <LazyImage 
+              src={currentProject.spotlight} 
+              alt="spotlight" 
+              className="w-full h-96 object-cover rounded-xl" 
+            />
           </div>
 
           <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
-            <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
+            <LazyImage 
+              src={currentProject.logo} 
+              alt="logo" 
+              className="w-10 h-10 shadow-sm" 
+            />
           </div>
 
           <div className="flex flex-col gap-5 text-white-600 my-5">
@@ -54,7 +63,11 @@ const Projects = () => {
             <div className="flex items-center gap-3">
               {currentProject.tags.map((tag, index) => (
                 <div key={index} className="tech-logo">
-                  <img src={tag.path} alt={tag.name} />
+                  <LazyImage 
+                    src={tag.path} 
+                    alt={tag.name}
+                    className="w-full h-full"
+                  />
                 </div>
               ))}
             </div>
