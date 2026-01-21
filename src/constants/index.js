@@ -1,3 +1,9 @@
+// CORS proxy function to load external images that don't allow cross-origin requests
+const corsProxy = (url) => {
+  // Use images.weserv.nl as a CORS proxy - it's free, fast, and CORS-enabled
+  return `https://images.weserv.nl/?url=${encodeURIComponent(url.replace(/^https?:\/\//, ''))}`;
+};
+
 export const navLinks = [
   {
     id: 1,
@@ -47,7 +53,7 @@ export const myProjects = [
       {
         id: 1,
         name: 'Angular',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png',
+        path: corsProxy('https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png'),
       },
       {
         id: 2,
@@ -195,7 +201,6 @@ export const workExperiences = [
   },
 ];
 
-
 export const skills = [
   {
       id: 1,
@@ -215,9 +220,8 @@ export const skills = [
           {
             id: 1.3,
             name: "Python",
-            image: "https://www.python.org/static/opengraph-icon-200x200.png",
+            image: corsProxy("https://www.python.org/static/opengraph-icon-200x200.png"),
           }
-
       ]
   },
   {
@@ -246,8 +250,28 @@ export const skills = [
       },
       {
         id: 2.5,
-        name: "",
+        name: "AWS",
         image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      },
+      {
+        id: 2.6,
+        name: "S3",
+        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+      },
+      {
+        id: 2.7,
+        name: "ECS",
+        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+      },
+      {
+        id: 2.8,
+        name: "EC2",
+        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+      },
+      {
+        id: 2.9,
+        name: "Firebase",
+        image: corsProxy("https://www.svgrepo.com/show/353735/firebase.svg"),
       }
 
       ]
@@ -259,22 +283,22 @@ export const skills = [
         {
           id: 3.1,
           name: "Angular",
-          image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png",
+          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png',
         },
         {
           id: 3.2,
           name: "React Js",
-          image: "https://www.svgrepo.com/show/354259/react.svg",
+          image: corsProxy("https://www.svgrepo.com/show/354259/react.svg"),
         },
         {
           id: 3.3,
           name: "Express Js",
-          image: "https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1",
+          image: corsProxy("https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1"),
         },
         {
           id: 3.4,
           name: "",
-          image: "https://nodejs.org/static/images/logo.svg",
+          image: corsProxy("https://nodejs.org/static/images/logo.svg"),
         },
         {
           id: 3.5,
@@ -284,12 +308,12 @@ export const skills = [
         {
           id: 3.6,
           name: "Next js",
-          image: "https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png",
+          image: corsProxy("https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png"),
         },
         {
           id: 3.7,
           name: "Django",
-          image: "https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg",
+          image: corsProxy("https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg"),
         },
         {
           id: 3.8,
@@ -315,7 +339,7 @@ export const skills = [
         {
           id: 4.1,
           name: "HTML5",
-          image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+          image: corsProxy("https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"),
         },
         {
           id: 4.2,
@@ -325,17 +349,17 @@ export const skills = [
         {
           id: 4.3,
           name: "Bootstrap5",
-          image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+          image: corsProxy("https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"),
         },
         {
-            id: 4.4,
-            name: "Material UI",
-            image: 'https://avatars.githubusercontent.com/u/33663932?v=4',
+          id: 4.4,
+          name: "Material UI",
+          image: 'https://avatars.githubusercontent.com/u/33663932?v=4',
         },
         {
           id: 4.5,
           name: "Tailwind CSS",
-          image: 'https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp',
+          image: corsProxy('https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp'),
         },
         {
           id: 4.6,
@@ -345,100 +369,141 @@ export const skills = [
       ]
   },
   {
-      id: 5,
-      title: "Version Control & Deployment",
-      skill: [
-          {
-            id: 5.1,
-            name: "Git",
-            image: "https://www.pngrepo.com/download/303548/git-icon-logo.png",
-          },
-          {
-            id: 5.2,
-            name: "GitHub",
-            image: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-          },
-          {
-            id: 5.3,
-            name: "Docker",
-            image: "https://www.svgrepo.com/show/448221/docker.svg",
-          },
-          {
-            id: 5.4,
-            name: "Nginx",
-            image: "https://www.svgrepo.com/show/354115/nginx.svg",
-          },
-          { 
-            id: 5.5,
-            name: "Vercel",
-            image: "https://yt3.ggpht.com/a/AATXAJyIDBA4e3bojKFwANXtkLdQJ2E9tmAhRDJtcw=s900-c-k-c0xffffffff-no-rj-mo",
-          },          
-          {
-            id: 5.6,
-            name: "Netlify",
-            image: "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-          },
-
-      ]
+    id: 5,
+    title: "Version Control & Deployment",
+    skill: [
+        {
+          id: 5.1,
+          name: "Git",
+          image: corsProxy("https://www.pngrepo.com/download/303548/git-icon-logo.png"),
+        },
+        {
+          id: 5.2,
+          name: "GitHub",
+          image: corsProxy("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"),
+        },
+        {
+          id: 5.3,
+          name: "Docker",
+          image: corsProxy("https://www.svgrepo.com/show/448221/docker.svg"),
+        },
+        {
+          id: 5.4,
+          name: "Nginx",
+          image: corsProxy("https://www.svgrepo.com/show/354115/nginx.svg"),
+        },
+        { 
+          id: 5.5,
+          name: "Bitbucket",
+          image: corsProxy("https://assets.streamlinehq.com/image/private/w_100,h_100,ar_1/f_auto/v1/icons/1/bitbucket-2xwd7qtpi4x3szcms2tjkj.png/bitbucket-fg3mcesn2ff3kxijrvhqbk.png?_a=DATAiZAAZAA0"),
+        },
+        { 
+          id: 5.6,
+          name: "CI/CD",
+          image: corsProxy("https://img.icons8.com/?size=160&id=38VIWX4TT5YQ&format=png"),
+        },          
+        {
+          id: 5.7,
+          name: "Netlify",
+          image: corsProxy("https://assets.streamlinehq.com/image/private/w_100,h_100,ar_1/f_auto/v1/icons/4/netlify-icon-jgktj1fibrri106wh4ay1a.png/netlify-icon-8k2xdggb0h4jh2vfigdhx.png?_a=DATAiZAAZAA0"),
+        },
+        {
+          id: 5.8,
+          name: "Vercel",
+          image: "https://yt3.ggpht.com/a/AATXAJyIDBA4e3bojKFwANXtkLdQJ2E9tmAhRDJtcw=s900-c-k-c0xffffffff-no-rj-mo",
+        },
+        {
+          id: 5.9,
+          name: "Railway",
+          image: corsProxy("https://railway.app/brand/logo-light.svg"),
+        },
+    ]
   },
   {
       id: 6,
       title: "Other Tools",
       skill: [
-          {
-              id: 6.1,
-              name: "Postman",
-              image:
-                  "https://www.svgrepo.com/show/354202/postman-icon.svg",
-          },
-          {
-              id: 6.2,
-              name: "Sublime Text",
-              image: "https://www.svgrepo.com/show/452109/sublime-text.svg",
-          },
-          {
-              id: 6.3,
-              name: "VS Code",
-              image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-          },
-                {
-        id: 6.4,
-        name: "Jest",
-        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
-      },
-      {
-        id: 6.5,
-        name: "JWT",
-        image: "https://jwt.io/img/pic_logo.svg",
-      },
-      {
-        id: 6.6,
-        name: "OAuth2",
-        image: "https://oauth.net/images/oauth-logo-square.png",
-      },
-
-
+        {
+          id: 6.1,
+          name: "Postman",
+          image: corsProxy("https://www.svgrepo.com/show/354202/postman-icon.svg"),
+        },
+        {
+          id: 6.2,
+          name: "Sublime Text",
+          image: corsProxy("https://www.svgrepo.com/show/452109/sublime-text.svg"),
+        },
+        {
+          id: 6.3,
+          name: "VS Code",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+        },
+        {
+          id: 6.4,
+          name: "Jest",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+        },
+        {
+          id: 6.5,
+          name: "JWT",
+          image: corsProxy("https://jwt.io/img/pic_logo.svg"),
+        },
+        {
+          id: 6.6,
+          name: "OAuth2",
+          image: corsProxy("https://oauth.net/images/oauth-logo-square.png"),
+        },
+        {
+          id: 6.7,
+          name: "Cursor",
+          image: corsProxy("https://www.cursor.com/favicon.ico"),
+        },
+        {
+          id: 6.8,
+          name: "Render",
+          image: "",
+        },
+        {
+          id: 6.9,
+          name: "WebSockets",
+          image: "",
+        },
+        {
+          id: 6.10,
+          name: "Sentry",
+          image: "https://img.icons8.com/?size=160&id=kjmeS4WFp36a&format=png",
+        },
       ]
   },
   {
     id: 7,
-    title: "Soft/Meta Tools", // ✅ NEW
+    title: "Soft/Meta Tools",
     skill: [
       {
         id: 7.1,
+        name: "Figma",
+        image: "https://img.icons8.com/?size=96&id=zfHRZ6i1Wg0U&format=png",
+      },
+      {
+        id: 7.2,
+        name: "Jira",
+        image: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
+      },
+      {
+        id: 7.3,
+        name: "Slack",
+        image: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
+      },
+      {
+        id: 7.4,
         name: "Notion",
         image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
       },
       {
-        id: 7.2,
+        id: 7.5,
         name: "Trello",
         image: "https://cdn.worldvectorlogo.com/logos/trello.svg",
-      },
-      {
-        id: 7.3,
-        name: "Jira",
-        image: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
-      },
+      }
     ]
   }
 ];

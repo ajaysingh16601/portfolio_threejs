@@ -1,10 +1,22 @@
 import { useGLTF, useTexture } from '@react-three/drei';
+import { useEffect } from 'react';
+import * as THREE from 'three';
 
 export function HackerRoom(props) {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
   const monitortxt = useTexture('textures/desk/monitor.png');
   const screenTxt = useTexture('textures/desk/screen1.png');
+
+  // Optimize textures for performance
+  useEffect(() => {
+    [monitortxt, screenTxt].forEach((texture) => {
+      texture.minFilter = THREE.LinearFilter;
+      texture.magFilter = THREE.LinearFilter;
+      texture.generateMipmaps = false;
+      texture.colorSpace = THREE.SRGBColorSpace;
+    });
+  }, [monitortxt, screenTxt]);
 
   return (
     <group {...props} dispose={null}>
