@@ -1,34 +1,74 @@
-import React, { useEffect, useRef } from 'react';
+import { useRef, useEffect, useState, useMemo } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
+// Animation cache to avoid re-loading the same animation
+const animationCache = new Map();
+
+// Lazy load FBX animations on demand
+const useLazyAnimation = (animationName) => {
+  const [animation, setAnimation] = useState(null);
+  
+  useEffect(() => {
+    if (!animationName) return;
+    
+    // Check cache first
+    if (animationCache.has(animationName)) {
+      setAnimation(animationCache.get(animationName));
+      return;
+    }
+    
+    // Import dynamically
+    import(`@react-three/drei`).then(({ useFBX }) => {
+      // This is a workaround - we'll load directly in the component
+    });
+  }, [animationName]);
+  
+  return animation;
+};
+
 const Developer = ({ animationName = 'idle', ...props }) => {
   const group = useRef();
+  const [loadedAnimations, setLoadedAnimations] = useState({});
 
   const { scene } = useGLTF('/models/animations/developer.glb');
-  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
+  const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
-  const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
-  const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
-  const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
-
-  idleAnimation[0].name = 'idle';
-  saluteAnimation[0].name = 'salute';
-  clappingAnimation[0].name = 'clapping';
-  victoryAnimation[0].name = 'victory';
+  // Load only the current animation
+  const currentAnim = useFBX(`/models/animations/${animationName}.fbx`);
+  
+  useEffect(() => {
+    if (currentAnim?.animations?.[0]) {
+      const anim = currentAnim.animations[0];
+      anim.name = animationName;
+      
+      setLoadedAnimations(prev => ({
+        ...prev,
+        [animationName]: anim
+      }));
+      
+      // Cache for future use
+      animationCache.set(animationName, anim);
+    }
+  }, [currentAnim, animationName]);
 
   const { actions } = useAnimations(
-    [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
-    group,
+    Object.values(loadedAnimations),
+    group
   );
 
   useEffect(() => {
-    actions[animationName].reset().fadeIn(0.5).play();
-    return () => actions[animationName].fadeOut(0.5);
-  }, [animationName]);
+    if (actions[animationName]) {
+      actions[animationName].reset().fadeIn(0.5).play();
+      return () => {
+        if (actions[animationName]) {
+          actions[animationName].fadeOut(0.5);
+        }
+      };
+    }
+  }, [animationName, actions]);
 
   return (
     <group ref={group} {...props} dispose={null}>

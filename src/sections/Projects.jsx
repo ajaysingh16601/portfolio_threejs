@@ -7,7 +7,7 @@ import { Center, OrbitControls } from '@react-three/drei';
 import { myProjects } from '../constants/index.js';
 import CanvasLoader from '../components/Loading.jsx';
 import DemoComputer from '../components/DemoComputer.jsx';
-import { LazyImage } from '../components/LazyLoad.jsx';
+import { LazyImage, LazySection } from '../components/LazyLoad.jsx';
 
 const projectCount = myProjects.length;
 
@@ -71,15 +71,6 @@ const Projects = () => {
                 </div>
               ))}
             </div>
-
-            {/* <a
-              className="flex items-center gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
-            </a> */}
           </div>
 
           <div className="flex justify-between items-center mt-7">
@@ -94,18 +85,28 @@ const Projects = () => {
         </div>
 
         <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={Math.PI} />
-            <directionalLight position={[10, 10, 5]} />
-            <Center>
-              <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
-              </Suspense>
-            </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-          </Canvas>
+          <LazySection 
+            fallback={
+              <div className="w-full h-full flex items-center justify-center text-white-600">
+                <div className="animate-pulse">Loading 3D Preview...</div>
+              </div>
+            }
+          >
+            <div className="w-full h-full">
+              <Canvas className="w-full h-full" frameloop="demand">
+                <ambientLight intensity={Math.PI} />
+                <directionalLight position={[10, 10, 5]} />
+                <Center>
+                  <Suspense fallback={<CanvasLoader />}>
+                    <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                      <DemoComputer texture={currentProject.texture} />
+                    </group>
+                  </Suspense>
+                </Center>
+                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+              </Canvas>
+            </div>
+          </LazySection>
         </div>
       </div>
     </section>

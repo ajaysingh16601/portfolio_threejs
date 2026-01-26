@@ -82,7 +82,6 @@ export const LazyImage = ({
         className={`${className} transition-opacity duration-300`}
         onLoad={handleImageLoad}
         onError={handleImageError}
-        crossOrigin="anonymous"
       />
     );
   }
@@ -137,7 +136,7 @@ export const LazySection = ({ children, fallback = null }) => {
   }, []);
 
   return (
-    <div ref={sectionRef}>
+    <div ref={sectionRef} className="w-full h-full">
       {isVisible ? children : fallback}
     </div>
   );

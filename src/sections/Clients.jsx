@@ -1,5 +1,6 @@
 import { skills } from '../constants/index.js';
 import { LazyImage } from '../components/LazyLoad.jsx';
+
 const container = ` text-gray-100 pt-6`;
 const wrapper = `flex flex-col justify-center items-center py-20 md:py-16 px-10 md:py-10 gap-4`;
 const title = 'text-4xl font-bold text-amber-500';
@@ -15,10 +16,11 @@ const skillName = 'text-gray-300 group-hover:text-lime-400 transition-colors dur
 const Clients = () => {
   return (
     <section className="c-space my-20">
-      <div name='skills' className={container}>
+      <div id='skills' className={container}>
         <div className={wrapper}>
           <div className={title}>Skills</div>
           <div className={desc}>Here are some of my skills, on which I have worked </div>
+          
           <div className={skillContainer}>
             {
               skills.map((oneSection) => (

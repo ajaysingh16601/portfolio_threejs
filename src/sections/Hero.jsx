@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen w-full flex flex-col relative" id="home">
-      <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-30 mt-20 c-space gap-3 relative z-10">
         <p className="sm:text-3xl text-xl font-medium text-white text-center font-generalsans">
           Hi, I am Ajay <span className="waving-hand">👋</span>
         </p>
@@ -29,11 +29,14 @@ const Hero = () => {
       <div className="w-full h-full absolute inset-0 mt-4">
         <Canvas 
           className="w-full h-full"
-          dpr={[1, isMobile ? 1 : 2]}
+          dpr={[1, isMobile ? 1 : 1.5]}
           performance={{ min: 0.5, max: 1 }}
           gl={{ 
-            antialias: false,
+            antialias: !isMobile,
             powerPreference: 'high-performance',
+            alpha: false,
+            stencil: false,
+            depth: true
           }}
         >
           <Suspense fallback={<CanvasLoader />}>

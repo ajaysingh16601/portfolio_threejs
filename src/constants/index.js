@@ -1,9 +1,3 @@
-// CORS proxy function to load external images that don't allow cross-origin requests
-const corsProxy = (url) => {
-  // Use images.weserv.nl as a CORS proxy - it's free, fast, and CORS-enabled
-  return `https://images.weserv.nl/?url=${encodeURIComponent(url.replace(/^https?:\/\//, ''))}`;
-};
-
 export const navLinks = [
   {
     id: 1,
@@ -12,21 +6,26 @@ export const navLinks = [
   },
   {
     id: 2,
+    name: 'Skills',
+    href: '#skills',
+  },
+  {
+    id: 3,
     name: 'About',
     href: '#about',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Work',
     href: '#work',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Contact',
     href: '#contact',
   },  
   {
-    id: 5,
+    id: 6,
     name: 'Resume',
     href: 'assets/ajay_solanki_cv.pdf', 
   },
@@ -39,7 +38,7 @@ export const myProjects = [
     MFB is a dynamic and innovative organization that revolutionizes the way individuals manage their financial transactions and investments. 
     With user-centric services, MFB empowers users to take control of their financial well-being by offering seamless solutions for payment management, 
     investments, mobile recharge, and loans.`,
-    subdesc: 'Tecnology: Angular, Django, PostgreSQL, TypeScript, Material UI',
+    subdesc: 'Tecnology: Angular, Node Js, PostgreSQL, TypeScript, Material UI, Docker, AWS, Nginx',
     href: '',
     texture: '/textures/project/maal1.mp4',
     logo: 'https://www.svgrepo.com/show/9509/bank.svg',
@@ -53,12 +52,12 @@ export const myProjects = [
       {
         id: 1,
         name: 'Angular',
-        path: corsProxy('https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png'),
+        path: 'https://cdn-icons-png.flaticon.com/128/15484/15484402.png',
       },
       {
         id: 2,
-        name: 'Django',
-        path: 'https://www.svgrepo.com/show/353657/django-icon.svg',
+        name: 'Node Js',
+        path: 'https://nodejs.org/static/logos/jsIconGreen.svg',
       },
       {
         id: 3,
@@ -75,13 +74,27 @@ export const myProjects = [
         name: 'Material UI',
         path: 'https://avatars.githubusercontent.com/u/33663932?v=4',
       },
-
+      {
+        id: 6,
+        name: 'Docker',
+        path:  'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+      },
+      {
+        id: 7,
+        name: 'AWS',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      },
+      {
+        id: 8,
+        name: 'Nginx',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
+      },
     ],
   },
   {
     title: 'Cryptocurrency Exchange App',
     desc:'App is a cutting-edge cryptocurrency exchange platform based in South Africa. Designed to cater to the growing demand for digital assets, App offers a seamless experience for buying, selling, and exchanging various cryptocurrencies. With real-time transaction capabilities and a user-friendly interface, App empowers individuals and businesses to participate in the exciting world of cryptocurrency trading.',
-    subdesc: 'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap',
+    subdesc: 'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap, Docker, AWS, Nginx',
     href: '',
     texture: '/textures/project/cowrie.mp4',
     logo: 'https://img.icons8.com/?size=100&id=7748&format=png&color=000000',
@@ -95,17 +108,17 @@ export const myProjects = [
       {
         id: 1,
         name: 'React.js',
-        path: 'https://www.svgrepo.com/show/354259/react.svg',
+        path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
         id: 2,
         name: 'Node Js',
-        path: 'https://nodejs.org/static/images/logo.svg',
+        path: 'https://nodejs.org/static/logos/jsIconGreen.svg',
       },
       {
         id: 3,
         name: 'Express Js',
-        path: 'https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
       },
       {
         id: 4,
@@ -116,6 +129,20 @@ export const myProjects = [
         id: 5,
         name: 'Bootstrap',
         path: 'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
+      },      {
+        id: 6,
+        name: 'Docker',
+        path: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      },
+      {
+        id: 7,
+        name: 'AWS',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      },
+      {
+        id: 8,
+        name: 'Nginx',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
       },
     ],
   },
@@ -125,7 +152,7 @@ export const myProjects = [
     The app offers a user-friendly interface for students to explore a wide range of courses, connect with qualified instructors, 
     and participate in interactive virtual classrooms. With its robust features, It empowers students to enhance their learning experience and 
     achieve their academic goals through convenient and flexible online education.`,
-    subdesc:'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap',
+    subdesc:'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap, Docker, AWS, Nginx',
     href: '',
     texture: '/textures/project/yasa.mp4',
     logo: '/assets/project-logo3.png',
@@ -136,22 +163,22 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/spotlight5.png',
+    spotlight: '/assets/spotlight3.png',
     tags: [
       {
         id: 1,
         name: 'React.js',
-        path: 'https://www.svgrepo.com/show/354259/react.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: 2,
         name: 'Node Js',
-        path: 'https://nodejs.org/static/images/logo.svg',
+        path: 'https://nodejs.org/static/logos/jsIconGreen.svg',
       },
       {
         id: 3,
         name: 'Express Js',
-        path: 'https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
       },
       {
         id: 4,
@@ -162,6 +189,20 @@ export const myProjects = [
         id: 5,
         name: 'Bootstrap',
         path: 'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
+      },      {
+        id: 6,
+        name: 'Docker',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+      },
+      {
+        id: 7,
+        name: 'AWS',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+      },
+      {
+        id: 8,
+        name: 'Nginx',
+        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
       },
     ],
   },
@@ -220,8 +261,44 @@ export const skills = [
           {
             id: 1.3,
             name: "Python",
-            image: corsProxy("https://www.python.org/static/opengraph-icon-200x200.png"),
+            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
           }
+      ]
+  },
+    {
+      id: 4,
+      title: "UI",
+      skill: [
+        {
+          id: 4.1,
+          name: "HTML5",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        },
+        {
+          id: 4.2,
+          name: "CSS3",
+          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png',
+        },
+        {
+          id: 4.3,
+          name: "Bootstrap5",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+        },
+        {
+          id: 4.4,
+          name: "Material UI",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+        },
+        {
+          id: 4.5,
+          name: "Tailwind CSS",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        },
+        {
+          id: 4.6,
+          name: "XML",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-original.svg",
+        },
       ]
   },
   {
@@ -256,22 +333,22 @@ export const skills = [
       {
         id: 2.6,
         name: "S3",
-        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+        image: "/assets/s3.svg",
       },
       {
         id: 2.7,
         name: "ECS",
-        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+        image:"/assets/ecs.svg"
       },
       {
         id: 2.8,
         name: "EC2",
-        image: corsProxy("https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"),
+        image:"/assets/ec2.svg"
       },
       {
         id: 2.9,
         name: "Firebase",
-        image: corsProxy("https://www.svgrepo.com/show/353735/firebase.svg"),
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
       }
 
       ]
@@ -283,22 +360,22 @@ export const skills = [
         {
           id: 3.1,
           name: "Angular",
-          image: 'https://upload.wikimedia.org/wikipedia/commons/f/f7/Angular_gradient.png',
+          image: "https://cdn-icons-png.flaticon.com/128/15484/15484402.png",
         },
         {
           id: 3.2,
           name: "React Js",
-          image: corsProxy("https://www.svgrepo.com/show/354259/react.svg"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
           id: 3.3,
           name: "Express Js",
-          image: corsProxy("https://th.bing.com/th/id/OIP.1ji9NLQl3sOXktSoEYnt3wHaHa?pid=ImgDet&rs=1"),
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
         },
         {
           id: 3.4,
-          name: "",
-          image: corsProxy("https://nodejs.org/static/images/logo.svg"),
+          name: "Node Js",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         },
         {
           id: 3.5,
@@ -308,12 +385,12 @@ export const skills = [
         {
           id: 3.6,
           name: "Next js",
-          image: corsProxy("https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png"),
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
         },
         {
           id: 3.7,
           name: "Django",
-          image: corsProxy("https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
         },
         {
           id: 3.8,
@@ -333,174 +410,128 @@ export const skills = [
       ]
   },
   {
-      id: 4,
-      title: "UI",
-      skill: [
-        {
-          id: 4.1,
-          name: "HTML5",
-          image: corsProxy("https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"),
-        },
-        {
-          id: 4.2,
-          name: "CSS3",
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png',
-        },
-        {
-          id: 4.3,
-          name: "Bootstrap5",
-          image: corsProxy("https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"),
-        },
-        {
-          id: 4.4,
-          name: "Material UI",
-          image: 'https://avatars.githubusercontent.com/u/33663932?v=4',
-        },
-        {
-          id: 4.5,
-          name: "Tailwind CSS",
-          image: corsProxy('https://logowik.com/content/uploads/images/tailwind-css3232.logowik.com.webp'),
-        },
-        {
-          id: 4.6,
-          name: "XML",
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
-        },
-      ]
-  },
-  {
-    id: 5,
+    id: 6,
     title: "Version Control & Deployment",
     skill: [
         {
-          id: 5.1,
+          id: 6.1,
           name: "Git",
-          image: corsProxy("https://www.pngrepo.com/download/303548/git-icon-logo.png"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         },
         {
-          id: 5.2,
+          id: 6.2,
           name: "GitHub",
-          image: corsProxy("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"),
+          image: "/assets/github.svg",
         },
         {
-          id: 5.3,
+          id: 6.3,
           name: "Docker",
-          image: corsProxy("https://www.svgrepo.com/show/448221/docker.svg"),
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
         },
         {
-          id: 5.4,
+          id: 6.4,
           name: "Nginx",
-          image: corsProxy("https://www.svgrepo.com/show/354115/nginx.svg"),
+          image: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
         },
         { 
-          id: 5.5,
+          id: 6.5,
           name: "Bitbucket",
-          image: corsProxy("https://assets.streamlinehq.com/image/private/w_100,h_100,ar_1/f_auto/v1/icons/1/bitbucket-2xwd7qtpi4x3szcms2tjkj.png/bitbucket-fg3mcesn2ff3kxijrvhqbk.png?_a=DATAiZAAZAA0"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
         },
         { 
-          id: 5.6,
+          id: 6.6,
           name: "CI/CD",
-          image: corsProxy("https://img.icons8.com/?size=160&id=38VIWX4TT5YQ&format=png"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg",
         },          
         {
-          id: 5.7,
+          id: 6.7,
           name: "Netlify",
-          image: corsProxy("https://assets.streamlinehq.com/image/private/w_100,h_100,ar_1/f_auto/v1/icons/4/netlify-icon-jgktj1fibrri106wh4ay1a.png/netlify-icon-8k2xdggb0h4jh2vfigdhx.png?_a=DATAiZAAZAA0"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
         },
         {
-          id: 5.8,
+          id: 6.8,
           name: "Vercel",
-          image: "https://yt3.ggpht.com/a/AATXAJyIDBA4e3bojKFwANXtkLdQJ2E9tmAhRDJtcw=s900-c-k-c0xffffffff-no-rj-mo",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
         },
         {
-          id: 5.9,
+          id: 6.9,
           name: "Railway",
-          image: corsProxy("https://railway.app/brand/logo-light.svg"),
+          image: "https://img.icons8.com/?size=100&id=61959&format=png&color=000000",
         },
     ]
   },
   {
-      id: 6,
+      id: 7,
       title: "Other Tools",
       skill: [
         {
-          id: 6.1,
+          id: 7.1,
           name: "Postman",
-          image: corsProxy("https://www.svgrepo.com/show/354202/postman-icon.svg"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
         },
         {
-          id: 6.2,
+          id: 7.2,
           name: "Sublime Text",
-          image: corsProxy("https://www.svgrepo.com/show/452109/sublime-text.svg"),
+          image: "https://img.icons8.com/?size=100&id=6RHskkZGRABM&format=png&color=000000",
         },
         {
-          id: 6.3,
+          id: 7.3,
           name: "VS Code",
           image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
         },
         {
-          id: 6.4,
+          id: 7.4,
           name: "Jest",
           image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
         },
         {
-          id: 6.5,
+          id: 7.5,
           name: "JWT",
-          image: corsProxy("https://jwt.io/img/pic_logo.svg"),
+          image: "https://img.icons8.com/?size=100&id=rHpveptSuwDz&format=png&color=000000",
         },
         {
-          id: 6.6,
+          id: 7.6,
           name: "OAuth2",
-          image: corsProxy("https://oauth.net/images/oauth-logo-square.png"),
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg",
         },
         {
-          id: 6.7,
+          id: 7.7,
           name: "Cursor",
-          image: corsProxy("https://www.cursor.com/favicon.ico"),
+          image: "https://img.icons8.com/?size=100&id=4gUIAQbx9oh5&format=png&color=000000",
         },
         {
-          id: 6.8,
-          name: "Render",
-          image: "",
-        },
-        {
-          id: 6.9,
-          name: "WebSockets",
-          image: "",
-        },
-        {
-          id: 6.10,
+          id: 7.8,
           name: "Sentry",
           image: "https://img.icons8.com/?size=160&id=kjmeS4WFp36a&format=png",
         },
       ]
   },
   {
-    id: 7,
+    id: 8,
     title: "Soft/Meta Tools",
     skill: [
       {
-        id: 7.1,
+        id: 8.1,
         name: "Figma",
-        image: "https://img.icons8.com/?size=96&id=zfHRZ6i1Wg0U&format=png",
+        image: "/assets/figma.svg",
       },
       {
-        id: 7.2,
+        id: 8.2,
         name: "Jira",
         image: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
       },
       {
-        id: 7.3,
+        id: 8.3,
         name: "Slack",
         image: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
       },
       {
-        id: 7.4,
+        id: 8.4,
         name: "Notion",
-        image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+        image: "/assets/notion.svg",
       },
       {
-        id: 7.5,
+        id: 8.5,
         name: "Trello",
         image: "https://cdn.worldvectorlogo.com/logos/trello.svg",
       }
