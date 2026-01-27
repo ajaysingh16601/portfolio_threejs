@@ -208,10 +208,13 @@ export const myProjects = [
   },
 ];
 
-export const calculateSizes = (isSmall, isMobile) => {
+export const calculateSizes = (isSmall, isMobile, isLandscape) => {
+  const baseScale = isSmall ? 0.05 : isMobile ? 0.058 : 0.065;
+  const landscapeBump = isLandscape && isMobile ? 0.006 : 0;
+
   return {
-    deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
-    deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
+    deskScale: baseScale + landscapeBump,
+    deskPosition: isMobile ? (isLandscape ? [0.2, -4, 0] : [0.5, -4.5, 0]) : [0.25, -5.5, 0],
   };
 };
 

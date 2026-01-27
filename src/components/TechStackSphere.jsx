@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Image } from '@react-three/drei';
 import * as THREE from 'three';
@@ -87,18 +88,27 @@ const BillboardIcon = ({ position, url, name }) => {
 };
 
 const TechStackSphere = () => {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const radius = isMobile ? 6 : 8;
+  const rotateSpeed = isMobile ? 2.5 : 6.5;
+  const dpr = isMobile ? [1, 1.2] : [1, 1.5];
+
   return (
-    <div className="w-full h-[75%] cursor-grab active:cursor-grabbing">
-      <Canvas camera={{ position: [0, 0, 18], fov: 50 }}>
+    <div className="w-full h-full min-h-[240px] sm:min-h-[300px] cursor-grab active:cursor-grabbing">
+      <Canvas
+        camera={{ position: [0, 0, 16], fov: 50 }}
+        dpr={dpr}
+        style={{ width: '100%', height: '100%' }}
+      >
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} />
         
-        <IconsSphere radius={8} />
+        <IconsSphere radius={radius} />
         
         <OrbitControls 
           enableZoom={false} 
           autoRotate 
-          autoRotateSpeed={6.5} 
+          autoRotateSpeed={rotateSpeed} 
           enablePan={false}
         />
       </Canvas>

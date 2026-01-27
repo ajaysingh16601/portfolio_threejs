@@ -8,7 +8,12 @@ const DemoComputer = (props) => {
   const { nodes, materials, animations } = useGLTF('/models/computer.glb');
   useAnimations(animations, group);
 
-  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/maal1.mp4');
+  const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/maal1.mp4', {
+    start: true,
+    loop: true,
+    muted: true,
+    crossOrigin: 'anonymous',
+  });
 
   useEffect(() => {
     if (txt) {
@@ -1004,6 +1009,8 @@ const DemoComputer = (props) => {
     </group>
   );
 };
+
+useGLTF.preload('/models/computer.glb');
 
 useGLTF.preload('/models/computer.glb');
 

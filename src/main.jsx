@@ -16,10 +16,16 @@ if ('serviceWorker' in navigator) {
       .register('/sw.js')
       .then((registration) => {
 
-        // Check for updates periodically
+        // Check for updates less frequently and on focus
         setInterval(() => {
           registration.update();
-        }, 60000); // Check every minute
+        }, 900000); // Check every 15 minutes
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.visibilityState === 'visible') {
+            registration.update();
+          }
+        });
       })
       .catch((error) => {
         console.log('Service Worker registration failed:', error);

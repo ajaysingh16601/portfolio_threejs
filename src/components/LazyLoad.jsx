@@ -119,8 +119,8 @@ export const LazySection = ({ children, fallback = null }) => {
         });
       },
       {
-        rootMargin: '100px',
-        threshold: 0.1,
+        rootMargin: '-50px',
+        threshold: 0.25,
       }
     );
 

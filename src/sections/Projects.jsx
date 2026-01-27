@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Suspense, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Canvas } from '@react-three/fiber';
 import { Center, OrbitControls } from '@react-three/drei';
 
@@ -13,6 +14,7 @@ const projectCount = myProjects.length;
 
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   const handleNavigation = (direction) => {
     setSelectedProjectIndex((prevIndex) => {
@@ -73,41 +75,44 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
+          {!isMobile && (
+            <div className="flex justify-between items-center mt-7">
+              <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
+                <img src="/assets/left-arrow.png" alt="left arrow" />
+              </button>
 
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-              <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <LazySection 
-            fallback={
-              <div className="w-full h-full flex items-center justify-center text-white-600">
-                <div className="animate-pulse">Loading 3D Preview...</div>
-              </div>
-            }
-          >
-            <div className="w-full h-full">
-              <Canvas className="w-full h-full" frameloop="demand">
-                <ambientLight intensity={Math.PI} />
-                <directionalLight position={[10, 10, 5]} />
-                <Center>
-                  <Suspense fallback={<CanvasLoader />}>
-                    <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                      <DemoComputer texture={currentProject.texture} />
-                    </group>
-                  </Suspense>
-                </Center>
-                <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-              </Canvas>
+              <button className="arrow-btn" onClick={() => handleNavigation('next')}>
+                <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+              </button>
             </div>
-          </LazySection>
+          )}
         </div>
+        {!isMobile && (
+          <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
+            <LazySection 
+              fallback={
+                <div className="w-full h-full flex items-center justify-center text-white-600">
+                  <div className="animate-pulse">Loading 3D Preview...</div>
+                </div>
+              }
+            >
+              <div className="w-full h-full">
+                <Canvas className="w-full h-full" frameloop="demand">
+                  <ambientLight intensity={Math.PI} />
+                  <directionalLight position={[10, 10, 5]} />
+                  <Center>
+                    <Suspense fallback={<CanvasLoader />}>
+                      <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
+                        <DemoComputer texture={currentProject.texture} />
+                      </group>
+                    </Suspense>
+                  </Center>
+                  <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+                </Canvas>
+              </div>
+            </LazySection>
+          </div>
+        )}
       </div>
     </section>
   );
