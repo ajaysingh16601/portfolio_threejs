@@ -400,7 +400,7 @@ export const skills = [
         {
           id: 3.9,
           name: "Framer Motion",
-          image: "https://cdn.worldvectorlogo.com/logos/framer-motion.svg",
+          image: "../assets/framer-motion.svg",
         },
         {
           id: 3.10,
@@ -518,12 +518,12 @@ export const skills = [
       {
         id: 8.2,
         name: "Jira",
-        image: "https://cdn.worldvectorlogo.com/logos/jira-1.svg",
+        image: "/assets/jira.svg",
       },
       {
         id: 8.3,
         name: "Slack",
-        image: "https://cdn.worldvectorlogo.com/logos/slack-new-logo.svg",
+        image: "/assets/slack.svg",
       },
       {
         id: 8.4,
@@ -533,7 +533,7 @@ export const skills = [
       {
         id: 8.5,
         name: "Trello",
-        image: "https://cdn.worldvectorlogo.com/logos/trello.svg",
+        image: "/assets/trello.svg",
       }
     ]
   }
