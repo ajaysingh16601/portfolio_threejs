@@ -2,22 +2,10 @@ import React, { useMemo } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Image } from '@react-three/drei';
-import * as THREE from 'three';
+
 import { skills } from '../constants/index.js';
 
-const SphereIcon = ({ position, url, name }) => {
-  return (
-    <group position={position}>
-      <Image 
-        url={url} 
-        transparent 
-        scale={[1.5, 1.5]} 
-        side={THREE.DoubleSide}
-        lookAt={[0, 0, 0]} // Make icons face the center (or camera if we want)
-      />
-    </group>
-  );
-};
+
 
 const IconsSphere = ({ radius = 10 }) => {
   // Flatten all skills into a single array
@@ -47,7 +35,7 @@ const IconsSphere = ({ radius = 10 }) => {
   }, [allSkills, radius]);
 
   // Make icons always face the camera
-  useFrame((state) => {
+  useFrame(() => {
     // This logic would go here if we wanted individual billboards
     // But Image component with lookAt might be tricky if we want them to face camera
     // Actually, let's just let them rotate with the sphere for now
@@ -56,14 +44,14 @@ const IconsSphere = ({ radius = 10 }) => {
   return (
     <group>
       {positions.map((skill, index) => (
-        <BillboardIcon key={`${skill.id}-${index}`} position={skill.position} url={skill.image} name={skill.name} />
+        <BillboardIcon key={`${skill.id}-${index}`} position={skill.position} url={skill.image} />
       ))}
     </group>
   );
 };
 
 // Billboard component to make sure icons always face the camera
-const BillboardIcon = ({ position, url, name }) => {
+const BillboardIcon = ({ position, url }) => {
   const ref = React.useRef();
   
   useFrame(({ camera }) => {

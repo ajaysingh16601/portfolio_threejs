@@ -24,7 +24,7 @@ const App = () => {
       <Suspense fallback={<LoadingFallback />}>
         <Hero />
       </Suspense>
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="min-h-screen text-white flex items-center justify-center">Loading Content...</div>}>
         <Clients />
         <About />
         <Projects />
