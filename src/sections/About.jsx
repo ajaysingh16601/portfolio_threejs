@@ -27,7 +27,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Ajay Solanki</p>
               <p className="grid-subtext">
-                I’m a passionate Fullstack Developer with over 3 years of professional experience in building scalable, high-performance web applications. I specialize in crafting intuitive user interfaces and delivering seamless end-to-end user experiences. I’m always eager to explore new technologies and embrace challenges that push me to grow. Coding is not just my career—it&apos;s what I love. I’m driven by a curiosity to solve real-world problems through elegant code.
+                I am a Full Stack Developer with 3 years of expertise designing, building, and deploying scalable, high-performance web applications. I specialize in frontend architecture and backend API development for real-time systems, AI-powered chatbots, and payment gateway integrations. I’m driven by a curiosity to solve real-world challenges through elegant code and leverage modern CI/CD or Cloud tools for impactful production solutions.
               </p>
             </div>
           </div>
@@ -40,7 +40,7 @@ const About = () => {
             <div>
 <p className="grid-headtext">Tech Stack</p>
 <p className="grid-subtext">
-  Proficient in modern JavaScript frameworks including React.js, Angular (v7–v18), and Node.js. Skilled in building RESTful APIs, component-based architectures, and maintaining clean, efficient codebases. Experienced with version control systems like GitHub, GitLab, and Bitbucket. I bring strong project ownership, collaborative team spirit, and sharp problem-solving abilities to every project. Whether it’s optimizing a complex algorithm or experimenting with the latest web tech, I’m always looking to improve and innovate.
+  Proficient in modern technologies including React.js, Angular,Next.js, Node.js, Express.js, and Databases like MongoDB, PostgreSQL, and MySQL. I design systems using Microservices architecture, WebSockets, JWT/OAuth, Redis, RabbitMQ, and GraphQL. I integrate tools like Docker, NGINX, and CI/CD pipelines alongside AWS infrastructure (EC2, S3, CloudWatch) to establish highly resilient environments. Whether optimizing database queries or creating seamless payment flows, I’m always looking to innovate. 
 </p>
             </div>
           </div>
