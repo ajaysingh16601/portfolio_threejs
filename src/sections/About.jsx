@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 import Button from '../components/Button.jsx';
 import { LazySection } from '../components/LazyLoad.jsx';
-import TechStackSphere from '../components/TechStackSphere.jsx';
+import MyGlobe from '../components/MyGlobe.jsx';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -56,7 +56,7 @@ const About = () => {
                   </div>
                 }
               >
-                <TechStackSphere />
+                <MyGlobe />
               </LazySection>
             </div>
             <div>
