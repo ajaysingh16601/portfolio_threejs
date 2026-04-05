@@ -122,7 +122,7 @@ const Contact = () => {
               disabled={loading}
             >
               {loading ? 'Sending...' : 'Send Message'}
-              <img src="/assets/arrow-up.png" alt="arrow-up" className="inline ml-2 w-4" />
+              <img src="/assets/arrow-up.webp" alt="arrow-up" className="inline ml-2 w-4" />
             </button>
           </form>
         </div>

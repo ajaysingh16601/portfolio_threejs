@@ -47,7 +47,7 @@ export const myProjects = [
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
-    spotlight: '/assets/spotlight1.png',
+    spotlight: '/assets/spotlight1.webp',
     tags: [
       {
         id: 1,
@@ -103,7 +103,7 @@ export const myProjects = [
       border: '0.2px solid #17293E',
       boxShadow: '0px 0px 60px 0px #2F6DB54D',
     },
-    spotlight: '/assets/spotlight2.png',
+    spotlight: '/assets/spotlight2.webp',
     tags: [
       {
         id: 1,
@@ -155,7 +155,7 @@ export const myProjects = [
     subdesc:'Tecnology: React Js, Node Js, Express Js, MongoDB, BootStrap, Docker, AWS, Nginx',
     href: '',
     texture: '/textures/project/yasa.mp4',
-    logo: '/assets/project-logo3.png',
+    logo: '/assets/project-logo3.webp',
     logoStyle: {
       backgroundColor: '#60f5a1',
       background:
@@ -163,7 +163,7 @@ export const myProjects = [
       border: '0.2px solid rgba(208, 213, 221, 1)',
       boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
     },
-    spotlight: '/assets/spotlight3.png',
+    spotlight: '/assets/spotlight3.webp',
     tags: [
       {
         id: 1,
@@ -228,7 +228,7 @@ export const workExperiences = [
     title: `• Built and maintained scalable full-stack applications using React.js, Angular, Node.js, Express.js, and MongoDB, ensuring high performance.`,
     titleDes: `• Designed APIs with JWT/OAuth, real-time WebSockets, and AI-powered chatbots using OpenAI and LLM-based APIs.`,
     titleSubDes: `• Led deployments via Docker & AWS, optimized caching with Redis & RabbitMQ, and integrated Stripe/PayPal payment gateways.`,
-    icon: '/assets/cislogo.png',
+    icon: '/assets/cislogo.webp',
     animation: 'victory',
   },
   {
@@ -240,7 +240,7 @@ export const workExperiences = [
     titleDes: `• Built RESTful APIs using Express.js and created reusable React components.`,
     titleSubDes: `• Improved code maintainability, scalability, and proficiently implemented CRUD operations.`,
         
-    icon: '/assets/techno.jpeg',
+    icon: '/assets/techno.webp',
     animation: 'salute',
   },
 ];

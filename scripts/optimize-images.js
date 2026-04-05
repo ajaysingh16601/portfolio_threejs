@@ -96,7 +96,7 @@ async function walkDirectory(dir, baseDir = dir) {
 
   for (const file of files) {
     const filePath = join(dir, file);
-    const relativePath = filePath.replace(baseDir + '/', '');
+    const relativePath = filePath.substring(baseDir.length + 1);
     const stats = await stat(filePath);
 
     if (stats.isDirectory()) {

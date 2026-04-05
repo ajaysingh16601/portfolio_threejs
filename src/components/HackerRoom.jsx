@@ -5,8 +5,8 @@ import * as THREE from 'three';
 export function HackerRoom(props) {
   const { nodes, materials } = useGLTF('/models/hacker-room.glb');
 
-  const monitortxt = useTexture('textures/desk/monitor.png');
-  const screenTxt = useTexture('textures/desk/screen1.png');
+  const monitortxt = useTexture('textures/desk/monitor.webp');
+  const screenTxt = useTexture('textures/desk/screen1.webp');
 
   // Optimize textures for performance
   useEffect(() => {
@@ -45,5 +45,5 @@ export function HackerRoom(props) {
 }
 
 useGLTF.preload('/models/hacker-room.glb');
-useTexture.preload('textures/desk/monitor.png');
-useTexture.preload('textures/desk/screen1.png');
+useTexture.preload('textures/desk/monitor.webp');
+useTexture.preload('textures/desk/screen1.webp');

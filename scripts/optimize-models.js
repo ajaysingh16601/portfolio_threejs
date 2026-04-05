@@ -53,7 +53,12 @@ async function optimizeModel(filePath) {
     console.log(`   ✅ Backup created`);
 
     // Load model
-    const io = new NodeIO().registerExtensions(ALL_EXTENSIONS);
+    const io = new NodeIO()
+      .registerExtensions(ALL_EXTENSIONS)
+      .registerDependencies({
+        'draco3d.decoder': await draco3d.createDecoderModule(),
+        'draco3d.encoder': await draco3d.createEncoderModule(),
+      });
     const document = await io.read(filePath);
 
     // Get original size
