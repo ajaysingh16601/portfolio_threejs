@@ -2,8 +2,7 @@ import { Suspense, lazy } from 'react';
 import Navbar from './sections/Navbar.jsx';
 import { Toaster } from 'react-hot-toast';
 
-// Lazy load heavy sections with Three.js
-const Hero = lazy(() => import('./sections/Hero.jsx'));
+import Hero from './sections/Hero.jsx';
 const Clients = lazy(() => import('./sections/Clients.jsx'));
 const About = lazy(() => import('./sections/About.jsx'));
 const Projects = lazy(() => import('./sections/Projects.jsx'));
@@ -21,9 +20,7 @@ const App = () => {
   return (
     <main className="max-w-7xl mx-auto relative">
       <Navbar />
-      <Suspense fallback={<LoadingFallback />}>
-        <Hero />
-      </Suspense>
+      <Hero />
       <Suspense fallback={<div className="min-h-screen text-white flex items-center justify-center">Loading Content...</div>}>
         <Clients />
         <About />

@@ -5,16 +5,18 @@ import { OrbitControls } from '@react-three/drei';
 import Developer from '../components/Developer.jsx';
 import CanvasLoader from '../components/Loading.jsx';
 import { workExperiences } from '../constants/index.js';
+import { useMediaQuery } from 'react-responsive';
 
 const WorkExperience = () => {
   const [animationName, setAnimationName] = useState('idle');
-
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <section className="c-space my-20" id="work">
       <div className="w-full text-white-600">
         <p className="head-text">My Work Experience</p>
 
         <div className="work-container">
+          {!isMobile && (
           <div className="work-canvas">
             <Canvas>
               <ambientLight intensity={7} />
@@ -27,6 +29,7 @@ const WorkExperience = () => {
               </Suspense>
             </Canvas>
           </div>
+          )}
 
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
