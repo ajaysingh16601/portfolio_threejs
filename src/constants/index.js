@@ -62,12 +62,12 @@ export const myProjects = [
       {
         id: 3,
         name: 'PostgreSQL',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
       },
       {
         id: 4,
         name: 'TypeScript',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       },
       {
         id: 5,
@@ -82,12 +82,12 @@ export const myProjects = [
       {
         id: 7,
         name: 'AWS',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
       },
       {
         id: 8,
         name: 'Nginx',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
       },
     ],
   },
@@ -137,12 +137,12 @@ export const myProjects = [
       {
         id: 7,
         name: 'AWS',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
       },
       {
         id: 8,
         name: 'Nginx',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
       },
     ],
   },
@@ -197,12 +197,12 @@ export const myProjects = [
       {
         id: 7,
         name: 'AWS',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
       },
       {
         id: 8,
         name: 'Nginx',
-        path: 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg',
+        path: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
       },
     ],
   },
@@ -253,13 +253,13 @@ export const skills = [
           {
               id: 1.1,
               name: "JavaScript",
-              image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
           },
 
           {
               id: 1.2,
               name: "TypeScript",
-              image: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+              image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
           },
           {
             id: 1.3,
@@ -280,7 +280,7 @@ export const skills = [
         {
           id: 4.2,
           name: "CSS3",
-          image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png',
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
         },
         {
           id: 4.3,
@@ -316,7 +316,7 @@ export const skills = [
           {
             id: 2.2,
             name: 'PostgreSQL',
-            image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
           },
           {
               id: 2.3,
@@ -331,7 +331,7 @@ export const skills = [
       {
         id: 2.5,
         name: "AWS",
-        image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
       },
       {
         id: 2.6,
@@ -406,7 +406,7 @@ export const skills = [
           image: "../assets/framer-motion.svg",
         },
         {
-          id: 3.10,
+          id: 3.0,
           name: "Three Js",
           image: "https://raw.githubusercontent.com/mrdoob/three.js/master/files/icon.svg",
         }
@@ -480,7 +480,7 @@ export const skills = [
         {
           id: 7.3,
           name: "VS Code",
-          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+          image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
         },
         {
           id: 7.4,
